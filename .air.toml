@@ -1,0 +1,12 @@
+[build]
+  cmd = "go build -o ./tmp/main ./cmd/server/main.go"
+  bin = "./tmp/main"
+  full_bin = ""
+
+[watch]
+  includes = ["**/*.go", "web/templates"]
+  excludes = ["web/assets/**/*.css"]
+
+[log]
+  level = "debug"
+

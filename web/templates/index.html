@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" class="h-full bg-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <script
+      src="https://unpkg.com/htmx.org@2.0.2"
+      integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="h-full">
+    <div class="min-h-full">
+      <nav class="bg-white border-b-[1px] border-gray-200">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <div class="flex h-14 items-stretch justify-between">
+            <div class="flex items-stretch">
+              <div class="flex items-center pb-2">
+                <img
+                  class="h-8 w-8"
+                  src="https://cdn-icons-png.flaticon.com/512/6868/6868509.png"
+                  alt="Your Company"
+                />
+              </div>
+              <div class="ml-10 flex items-stretch space-x-4">
+                <div
+                  class="flex items-center border-b-2 border-transparent hover:border-gray-300"
+                >
+                  <a
+                    href="#"
+                    class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-700"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </div>
+                <div
+                  class="flex items-center border-b-2 border-transparent hover:border-gray-300"
+                >
+                  <a
+                    href="/maps"
+                    class="px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-700"
+                    aria-current="page"
+                    >Maps</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <header class="bg-white shadow">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"></div>
+      </header>
+      <main>
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"></div>
+      </main>
+    </div>
+  </body>
+</html>
