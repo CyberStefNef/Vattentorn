@@ -3,7 +3,6 @@ package main
 import (
 	"html/template"
 	"io"
-	"log"
 	"net/http"
 	"strconv"
 
@@ -49,19 +48,17 @@ func main() {
 	e.GET("/", HomeHandler)
 
 	e.GET("/images", func(c echo.Context) error {
-		// Get the "page" parameter (which page of images we're on)
 		page := c.QueryParam("page")
 		pageIndex, err := strconv.Atoi(page)
 		if err != nil || pageIndex < 0 {
-			pageIndex = 0 // Default to the first page if invalid
+			pageIndex = 0
 		}
 
-		// Define how many images to load per "page"
-		pageSize := 3
+		pageSize := 5
 		start := pageIndex * pageSize
 		end := start + pageSize
 		if start >= len(images) {
-			return c.NoContent(http.StatusOK) // No more images to load
+			return c.NoContent(http.StatusOK)
 		}
 		if end > len(images) {
 			end = len(images)
@@ -74,6 +71,6 @@ func main() {
 }
 
 func HomeHandler(c echo.Context) error {
-	initialImages := images[:6]
+	initialImages := ""
 	return c.Render(http.StatusOK, "index.html", initialImages)
 }
