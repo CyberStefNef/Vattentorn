@@ -1,0 +1,16 @@
+services:
+  db-postgres:
+    image: postgis/postgis:15-3.3
+    container_name: vattentorn-db-postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=${PG_USER}
+
+volumes:
+  pgdata:
