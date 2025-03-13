@@ -1,3 +1,3 @@
 # Vattentorn
 
-HTMX website for the amazing swedisch wattertowers
+HTMX website for the amazing swedisch watertowers
